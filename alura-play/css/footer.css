@@ -1,0 +1,22 @@
+.rodape__container { /*elemento pai do rodape*/
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; /*quebra de linha, ou coluna, no caso*/
+}
+
+@media (min-width: 768px) {
+    .rodape__container {
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 1224px) {
+    .rodape__container { 
+        margin-left: 60px;
+    }
+}
+
+/*
+para utilizar o direction e wrap em uma unica linha, seria:
+flex-flow: column wrap; 
+*/

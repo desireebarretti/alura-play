@@ -1,0 +1,14 @@
+.superior__secao__container {
+    display: flex;   
+    align-items: center;
+    white-space: nowrap; /*para que não quebre a frase no meio*/
+    overflow: scroll; /*inserindo uma barra de rolagem*/
+    gap: 15px; /*espacamento entre os elementos de forma igualitária, deve ser inserida no pai em que quer organizar os filhos*/
+    font-weight: 200;
+}
+
+@media (min-width: 1224px) {
+    .superior__secao__container {
+        margin-left: 132px;
+    }
+}

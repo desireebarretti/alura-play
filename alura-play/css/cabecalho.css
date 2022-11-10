@@ -1,0 +1,17 @@
+.cabecalho__container { /*elemento pai*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /*fixando o cabecalho*/
+    top: 0; /*posicao fixa topo 0*/
+}
+.cabecalho__pesquisar__item {
+    display: none; 
+}
+@media (min-width: 834px) { 
+    .cabecalho__pesquisar__item  {
+        display: block; /*reaparecer o display dop pesquisar*/
+    }
+}
+
+

@@ -1,0 +1,80 @@
+.menu__container {
+    position: fixed; /*aplicando o menu na parte de baixo do layout*/
+    bottom: 0%;
+    height: 55px;
+    width: 100%;
+}
+.menu__lista {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+}
+.menu__lista li {
+    align-self: center; /*aplicando a propr em cada item do menu, usado no item que deseja alterar apenas*/
+}
+.menu__lista:nth-child(2), /*deixando apenas a primeira parte do menu aparecendo*/
+.menu__lista:nth-child(3),
+.menu__lista:nth-child(4) {
+    display: none;
+}
+.menu__itens {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /*espacamento entre os itens do menu*/
+}
+
+@media (min-width: 768px) {
+    .menu__container {
+        position: fixed;
+        left: 0%;
+        height: calc(100% - 80px);
+        width: 74px;
+    }
+    .menu__lista {
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 40px;
+    }
+}
+
+@media (min-width: 1224px) {
+    .menu__container {
+        position: fixed;
+        left: 0%;
+        height: calc(100% - 80px);
+        width: 210px;
+        overflow: scroll;
+    }
+    .menu__lista:nth-child(2), /*deixando apenas a primeira parte do menu aparecendo*/
+    .menu__lista:nth-child(3),
+    .menu__lista:nth-child(4) {
+        display: flex;
+    }
+    .menu__lista {
+        height: auto;
+        padding: 20px 17px 20px 15px;
+        border-top: 1px solid #ffff;
+        gap: 15px;
+    }
+    .menu__itens {
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+        white-space: nowrap;
+    }
+    .menu__lista:nth-child(3) {
+        flex-direction: column-reverse; /*invertendo a ordem de baixo pra cima do filho 03*/
+    }
+    .jogos { 
+        order: 3; /*o leitor de tela não lê a ordem, e sim como está no html*/
+    }
+    .filmes { /*alterando a ordem dos itens separadamente*/
+        order: 2; 
+    }
+    .premium {
+        order: 1;
+    }
+    .maispagina {
+        order: 4;
+    }
+}
